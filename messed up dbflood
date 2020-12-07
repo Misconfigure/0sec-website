@@ -1,0 +1,56 @@
+import random
+import request
+import sys
+import subprocess as s
+import string
+import json
+import os
+import threading
+
+
+s.call("clear", shell=True)
+def run_engine():
+	list_of_names= [
+	        "Jonathan",\
+	        "Timmy",\
+	        "Santa",\
+	        "Barthalemue",\
+	        "Arthur",\
+	        "Monkey",\
+	        "Python",\
+	        "Peoful",\
+	        "Fancy",\
+	        "Sin",\
+	        "Reaper",\
+	        "Grim_Reaper",\
+	        "Database_retard",\
+	        "Databse",\
+	        "Mess_You_up",\
+	        "SG",\
+
+	  url_input = input("Enter Login Page URL > ")
+	  url = f"(url_input)"
+	  while True:
+	  	  try:
+	       
+	  	  	 character = string.ascii_letters + string.digits + "!@#$%^&()"
+	  	  	 random.seed = (os.urandom)(1024))
+             names = list_of_names
+             for name in names:
+             	 name_extra = "".join(random.choice(string.digits))
+             	 username = name.lower() + name_extra + "@gmail.com"
+             	 password = "".join(random.choice(string.digits))
+
+             	 request.post(url, allow_redirects=False, data={
+             	 	  "sdnoiasdandsidon": username,
+             	 	  "sadasdoasidodinsin": password,
+
+             	 	  })
+             	      threading.Thread(target=run_engine).start()
+             	      print(str("Sending Username %5 and Password %5" % (username, password)))
+              except KeyboardInterrupt:
+              	  sys.exit(0)
+              except ConnectionError:
+              	print("[-] Could Not Connect [-]")
+
+           run_engine()
